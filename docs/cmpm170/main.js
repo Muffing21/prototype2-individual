@@ -1,8 +1,8 @@
-title = "Harry's Game";
+title = "Amogus Fishing";
 
 //vite build --base=/prototype-2-individual/
 
-description = `test test`;
+description = ``;
 
 let pins;
 let pins2;
