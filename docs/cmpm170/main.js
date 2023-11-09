@@ -1,4 +1,4 @@
-title = "Amogus Fishing";
+title = "Sussy Fishing";
 
 //vite build --base=/prototype-2-individual/
 
@@ -36,7 +36,9 @@ llbll
 `,
 ];
 
-options = {};
+options = {
+  theme: "pixel" 
+};
 
 function update() {
   if (!ticks) {
@@ -49,6 +51,8 @@ function update() {
     nextFishDist = 100;
 
   }
+  color("light_blue");
+  rect(vec(0, 10), vec(100, 50));
   color("cyan");
   char("a", characterX, characterY);
   color("black");
@@ -56,8 +60,10 @@ function update() {
   line(fishLine.pin, vec(fishLine.pin).addWithAngle(fishLine.angle, fishLine.length));
   color("green");
   rect(projectileObj.pin, 3)
-  
 
+  
+  
+  
   
 
 
