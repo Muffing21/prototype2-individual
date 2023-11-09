@@ -53,7 +53,7 @@ function update() {
   }
   color("light_blue");
   rect(vec(0, 10), vec(100, 50));
-  color("cyan");
+  color("red");
   char("a", characterX, characterY);
   color("black");
   arc(40, 95, 30, 3, 0, -1)
