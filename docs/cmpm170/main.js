@@ -74,6 +74,7 @@ function update() {
       caughtFish = true;
       fishSpeed = 0;
       if(input.isJustPressed){
+        play("hit");
         fishLine.angle += 0.5;
         projectileObj.pin.y += retractSpeed
         if(p.y+0.5 < projectileObj.pin.y){
@@ -102,6 +103,7 @@ function update() {
       console.log(lifePoint);
       if(lifePoint == 0){
         lifePoint = 10;
+        play("synth")
         end("Game Over");
       }
     }
@@ -111,13 +113,16 @@ function update() {
   let projectileSpeed = 2; 
     
   if(input.isPressed && retract == false && caughtFish == false){
+    play("click");
     if(projectileObj.pin.y > 10 ){
+      
       projectileObj.pin.y -= projectileSpeed;
     }
   }
   else{
     retract = true; 
     if(projectileObj.pin.y < pins2.y && caughtFish == false){
+      play("laser")
       fishLine.angle += 0.5;
       projectileObj.pin.y += 1;  
     }
